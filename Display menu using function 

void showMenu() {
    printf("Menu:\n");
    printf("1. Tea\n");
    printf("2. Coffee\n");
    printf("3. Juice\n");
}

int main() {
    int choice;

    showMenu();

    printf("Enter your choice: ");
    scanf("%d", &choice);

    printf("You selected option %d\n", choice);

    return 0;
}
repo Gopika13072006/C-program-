@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void showMenu() {
+    printf("Menu:\n");
+    printf("1. Tea\n");
+    printf("2. Coffee\n");
+    printf("3. Juice\n");
+}
+
+int main() {
+    int choice;
+
+    showMenu();
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    printf("You selected option %d\n", choice);
+
+    return 0;
+}
