@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+float calculateSI(float p, float r, float t) {
+    return (p * r * t) / 100;
+}
+
+int main() {
+    float p, r, t, si;
+
+    printf("Enter principal, rate and time: ");
+    scanf("%f %f %f", &p, &r, &t);
+
+    si = calculateSI(p, r, t);
+
+    printf("Simple Interest = %.2f\n", si);
+
+    return 0;
+}
