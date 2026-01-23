@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Student {
+    int roll;
+    char name[50];
+};
+
+int main() {
+    struct Student s[10];
+    int n;
+
+    printf("Enter number of records: ");
+    scanf("%d", &n);
+
+    printf("Total Records = %d\n", n);
+    return 0;
+}
