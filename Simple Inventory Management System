@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+struct Item {
+    int id;
+    char name[50];
+    int qty;
+};
+
+int main() {
+    struct Item it[10];
+    int n = 0, choice, i, sid;
+
+    while(1) {
+        printf("\n1.Add 2.Display 3.Search 4.Update 5.Exit\n");
+        scanf("%d", &choice);
+
+        if(choice == 1) {
+            scanf("%d %s %d", &it[n].id, it[n].name, &it[n].qty);
+            n++;
+        }
+        else if(choice == 2) {
+            for(i = 0; i < n; i++)
+                printf("%d %s %d\n", it[i].id, it[i].name, it[i].qty);
+        }
+        else if(choice == 3) {
+            scanf("%d", &sid);
+            for(i = 0; i < n; i++)
+                if(it[i].id == sid)
+                    printf("%s %d\n", it[i].name, it[i].qty);
+        }
+        else if(choice == 4) {
+            scanf("%d", &sid);
+            for(i = 0; i < n; i++)
+                if(it[i].id == sid)
+                    scanf("%s %d", it[i].name, &it[i].qty);
+        }
+        else
+            break;
+    }
+
+    return 0;
+}
